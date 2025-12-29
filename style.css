@@ -1,0 +1,144 @@
+/* Body and transition */
+body {
+  transition: background-color 0.8s ease;
+  overflow: hidden;
+  background-color: #fad2e1;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.BEST {
+  text-align: center;
+  color: rgb(242, 77, 104);
+}
+
+/* About her section */
+.about-her {
+  display: flex;
+  justify-content: center;
+}
+
+.about-her ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-her li {
+  font-size: 24px;
+  cursor: pointer;
+  margin: 8px 0;
+  transition: transform 0.3s ease;
+}
+
+.about-her li:hover {
+  transform: scale(1.05);
+}
+
+/* Seen section */
+.seen {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.seen h3 {
+  font-size: 32px;
+  color: #582932;
+}
+
+.seen h4 {
+  font-size: 26px;
+  color: #cf2d4b;
+}
+
+/* Reset button */
+#resetBtn {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 25px;
+  font-size: 16px;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Bottom section container */
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Image container */
+#imageBox {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Image styling with fade-in */
+#itemImage {
+  max-width: 400px;
+  max-height: 240px;
+  border-radius: 10px;
+  object-fit: contain;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.6s ease;
+  visibility: hidden;
+  display: block;
+}
+
+#itemImage.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Hearts animation */
+.heart {
+  position: fixed;
+  font-size: 24px;
+  pointer-events: none;
+  animation: floatUp 3s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-600px);
+    opacity: 0;
+  }
+}
+
+/* Optional: compliment box styling */
+#complimentBox {
+  text-align: center;
+  font-size: 22px;
+  color: #6b2d3a;
+  margin-top: 25px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* Optional: quiet button */
+#quietBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #3b2b2f;
+  color: white;
+  cursor: pointer;
+}
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
